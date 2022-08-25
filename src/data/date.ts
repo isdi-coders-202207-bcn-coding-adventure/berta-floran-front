@@ -1,3 +1,3 @@
-const dateline: Date = new Date("2023-8-24");
+const dateline: Date = new Date("2022-9-16");
 
 export default dateline;
