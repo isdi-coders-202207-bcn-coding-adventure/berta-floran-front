@@ -1,22 +1,7 @@
 import { useEffect, useState } from "react";
 import dateline from "../../data/date";
+import getTimeRemaining from "../../utils/getTimeRemaining";
 import CounterStyled from "./CounterStyled";
-
-const getTimeRemaining = (dateline: Date) => {
-  const total = dateline.getTime() - new Date().getTime();
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds,
-  };
-};
 
 const Counter = (): JSX.Element => {
   const initialTime = {
